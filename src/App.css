@@ -1,7 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  /* padding: 2rem; */
   text-align: center;
+
 }
 
+:root {
+  --Strongcyan: hsl(172, 67%, 45%);
+  --Verydarkcyan: hsl(183, 100%, 15%);
+  --Darkgrayishcyan: hsl(186, 14%, 43%);
+  --Grayishcyan: hsl(184, 14%, 56%);
+  --Lightgrayishcyan: hsl(185, 41%, 84%);
+  --Verylightgrayishcyan: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  background-color: var(--Lightgrayishcyan);
+  min-height: none;
+}
+
+.logo {
+  width: 15vw;
+  height: auto;
+  padding: 50px;
+}
+
+.tip-calculator {
+  background-color: var(--White);
+  height: auto;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  padding: 10vw;
+  border-radius: 15px;
+}
+
+ .inputNumber {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--Darkgrayishcyan);
+  font-family: 'Space Mono';
+  font-weight: 700;
+  font-size: 0.7rem;
+  /* margin-bottom: 40px; */
+  position: relative;
+}
+.inputNumber-icon{
+  margin-bottom: 40px;
+  position: relative;
+  width: 100%;
+}
+.inputNumber-icon > img {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.inputNumber-icon > input[type="number"] {
+  background-color: var(--Verylightgrayishcyan);
+  border: none;
+  color: var(--Verydarkcyan);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 10px;
+  border-radius: 10px;
+  width: calc(100% - 20px);
+}
+
+.inputNumber > input[type="number"]:focus-visible {
+  outline: none;
+}
+
+
+.totalCount{
+  background-color: var(--Verydarkcyan);
+  color: var(--Lightgrayishcyan);
+  min-height: 200px;
+  border-radius: 15px;
+  padding: 20px;
+}
+.tipsButton{
+  gap: 30px;
+}
+.tipsButton > input[type="number"]{
+  width: calc(33vw);
+  height: auto;
+  background-color: var(--Verydarkcyan);
+  border: none;
+  padding: 15px 0;
+  margin: 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+
+.tipsButton > ::placeholder{
+  color: white;
+}
+
+input[type="button"]{
+  width: calc(33vw);
+  height: auto;
+  background-color: var(--Verydarkcyan);
+  border: none;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.totalCount-title{
+  display: flex;
+  justify-content: space-between;
+}
+
+.totalCount-title h3{
+  text-align: left;
+}
+.totalCount-title h4{
+  font-size: 1.5rem;
+  color: var(--Strongcyan);
+}
+
+.totalCount-title span{
+  font-size: 0.9rem;
+  color: var(--Strongcyan);
+  text-align: left;
+}
